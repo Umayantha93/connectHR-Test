@@ -17,7 +17,6 @@ class CreateCompaniesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
-            $table->string('address');
             $table->integer('employee_count');
             $table->timestamps();
         });
