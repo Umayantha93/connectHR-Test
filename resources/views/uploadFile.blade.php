@@ -14,10 +14,12 @@
             </div>
         @endforeach
     @endif
-    <form method="post" action="{{'/upload-a-file'}}">
+    <form method="post" action="{{'/upload-a-file'}}"  enctype="multipart/form-data">
+    @csrf
         <input type="file" name="file">
         <button>Upload</button>
     </form>
+
 </div>
 </body>
 </html>
