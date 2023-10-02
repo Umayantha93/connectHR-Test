@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Company;
 
 class CompanyController extends Controller
 {
@@ -11,6 +12,8 @@ class CompanyController extends Controller
      */
     public function index(): string
     {
-        return 'Now it is you r turn';
+        $companies = Company::withCount('locations')->get();
+
+        return view('index', compact('companies'));
     }
 }
