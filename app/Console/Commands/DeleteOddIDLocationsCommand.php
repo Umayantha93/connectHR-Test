@@ -39,7 +39,7 @@ class DeleteOddIDLocationsCommand extends Command
         $locations = Location::all();
         foreach ($locations as $location) {
             if ($location->id % 2 == 1) {
-                $locationx->delete();
+                $location->delete();
             }
         }
     }

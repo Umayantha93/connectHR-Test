@@ -16,7 +16,7 @@ class CompanyFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'address' => $this->faker->address(),
-            'employee_count' => $this->faker->randomKey(['you'=>'you','can'=>'can','remove'=>'remove','me'=>'me']),
+            'employee_count' => $this->faker->numberBetween(1, 100),
         ];
     }
 }
