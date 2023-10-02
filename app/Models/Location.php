@@ -14,4 +14,9 @@ class Location extends Model
         'name',
         'address',
     ];
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
 }
