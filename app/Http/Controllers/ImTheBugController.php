@@ -13,7 +13,7 @@ class ImTheBugController extends Controller
     /**
      * @return Application|Factory|View
      */
-    public function bugHouse(): int
+    public function bugHouse()
     {
         return view('bug');
     }
